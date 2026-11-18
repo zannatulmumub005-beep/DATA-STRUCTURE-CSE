@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+//create a node
+class Node
+{   
+    public:
+    int data;
+    Node* left;
+    Node* right;
+    //constructor
+    Node(int value)
+    {
+        data=value;
+        left=NULL;
+        right=NULL;
+    }
+}; 
+int main()
+{
+    //create nodes
+    Node* root=new Node(10);
+    Node* second=new Node(20);
+    Node* third=new Node(30);
+    Node* fourth=new Node(40);
+    Node* fifth=new Node(50);
+    //connecting node
+    root->left=second;
+    root->right=third;
+
+    second->left=fourth;
+   second->right=fifth;
+
+//display node
+cout<<"Root: "<<root->data<<endl;
+cout<<"left child of root: "
+    <<root->left->data<<endl;
+
+cout<<"Right child of root: "
+    <<root->right->data<<endl;
+
+cout<<"left child of 20: "
+    <<second->left->data<<endl;
+
+cout<<"left child of 20: "
+    <<second->right->data<<endl;
+
+
+}
